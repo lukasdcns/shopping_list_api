@@ -1,0 +1,59 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Connexion - Liste de course partagée
+    style.
+      body {
+        font-family: 'Arial', sans-serif;
+        max-width: 600px;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        color: #463f3a;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+      }
+      p {
+        text-align: center;
+        color: #463f3a;
+        font-family: 'Arial', sans-serif;
+      }
+      a.button {
+        font-family: 'Arial', sans-serif;
+        color: #f4f3ee;
+        background-color: #8a817c;
+        text-decoration: none;
+        border-radius 100%;
+        text-align: center;
+        margin: auto;
+        display: block;
+        width: 30%;
+        padding: 1em;
+        border-radius: .5em;
+        text-transform: uppercase;
+      }
+      .link_container {
+        font-family: 'Arial', sans-serif;
+        background-color: #8a817c;
+        padding: 10px;
+        width: 70%;
+        margin: auto;
+        border-radius: .5em;
+
+        a {
+          color: #f4f3ee;
+          font-size: 1.1rem;
+          text-align: center;
+        }
+      }
+
+  body(class="email")
+    h1 Liste de courses partagée
+    p Vous avez reçu un lien pour vous connecter à votre compte
+    a(class="button" href="//http://localhost:3000" + href) Connexion
+    p Vous pouvez aussi copier/coller ce lien dans votre navigateur :
+    div(class="link_container")
+        a(href="//http://localhost:3000" + href) http://localhost:3000/#{href}
