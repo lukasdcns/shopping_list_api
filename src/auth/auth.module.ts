@@ -8,9 +8,11 @@ import { UsersModule } from 'src/users/users.module';
 import { JwtStrategy } from './jwt.strategy';
 import { EmailModule } from 'src/email/email.module';
 import { MagicLinkStrategy } from './magic-link.strategy';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
+    HttpModule,
     EmailModule,
     PrismaModule,
     PassportModule,

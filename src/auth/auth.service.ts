@@ -1,4 +1,4 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { AuthEntity } from './entity/auth.entity';
 import { UsersService } from 'src/users/users.service';
@@ -22,12 +22,12 @@ export class AuthService {
   }
 
   async validateUser(email: string) {
-    const user = await this.usersService.findOneByEmail(email);
+    // const user = await this.usersService.findOneByEmail(email);
 
-    if (!user) {
-      throw new UnauthorizedException(`No user found for email: ${email}`);
-    }
+    // if (!user) {
+    //   throw new UnauthorizedException(`No user found for email: ${email}`);
+    // }
 
-    return user;
+    return (await this.usersService.findOneByEmail(email)) ?? null;
   }
 }
